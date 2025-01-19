@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fullscreen Image</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .fullscreen-container {
+            width: 100%;
+            height: 100vh;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #000; /* Optional: adds black background */
+        }
+
+        .fullscreen-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* This will cover the entire container while maintaining aspect ratio */
+            object-position: center; /* Centers the image */
+        }
+
+        /* Optional: Add this if you want to maintain image quality */
+        img {
+            image-rendering: -webkit-optimize-contrast;
+            image-rendering: crisp-edges;
+        }
+    </style>
+</head>
+<body>
+    <div class="fullscreen-container">
+        <img src="speed.jpg" alt="Fullscreen Image" class="fullscreen-image">
+    </div>
+</body>
+</html>
